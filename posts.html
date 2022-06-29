@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    * {
+  box-sizing: border-box;
+  margin: 0;
+}
+    
+    body {
+      font-family: Arial;
+      padding: 20px;
+      background: #2f2f2f;
+    }
+    
+    .header {
+     padding-left: 65px;
+    padding-top: 20px;
+    font-size: 17px;
+    text-align: left;
+    background: #2f2f2f;
+    color: #ffffff;
+    font-family: sans-serif;
+    }
+    
+    .leftcolumn {   
+      float: left;
+      width: 100%;
+    }
+    
+    .card {
+   background-color: #ffffff;
+   padding: 20px;
+   margin-top: 20px;
+   width: 1100px;
+   border-radius: 16px;
+   font-family: 'Baloo Tamma 2', cursive;
+    margin-left: 50px;
+}
+    
+    .title{
+        font-family: 'Baloo Tamma 2', cursive;
+    }
+    
+    .date{
+        font-family: sans-serif;
+    }
+    
+    .blog_owner{
+        font-family: 'Baloo Tamma 2', cursive;
+    }
+    
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    nav{
+        position: relative;
+        float: left;
+        width: 100%;
+        height: 46px;
+        background-color: #364956;
+        margin: 0;
+    }
+    
+    @media screen and (max-width: 800px) {
+      .leftcolumn, .rightcolumn {   
+        width: 100%;
+        padding: 0;
+      }
+    }
+</style>
+</head>
+<body>
+
+<div class="header">
+    <pre>
+  <h2>Web-Dev Blogs<a style="text-decoration: none; color: #ffffff;" href="/">  Home </a></h2>
+  </pre>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+        <h2>{{posts.title}}</h2><br><br>
+        <h4>{{posts.created_at}}</h4><br><br>
+        <p>{{posts.body}}</p><br><br>
+        <h4> Creator: {{posts.blog_owner}}</h4><br><br>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+
